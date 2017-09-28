@@ -1,0 +1,35 @@
+{
+  "name": "fractal-image",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha -r ts-node/register src/**/*.test.ts",
+    "lint": "tslint --type-check -p . && eslint public/index.js",
+    "build": "npm run lint && tsc -p .",
+    "watch": "npm run lint && nodemon -e js,css,html,ejs --exec ts-node -- .\\src\\index.ts"
+  },
+  "author": "Alexey Levin",
+  "license": "none",
+  "dependencies": {
+    "@types/ejs": "^2.3.33",
+    "@types/express": "^4.0.37",
+    "@types/jimp": "^0.2.1",
+    "@types/node": "^8.0.31",
+    "ejs": "^2.5.7",
+    "eslint": "^4.7.2",
+    "express": "^4.15.5",
+    "jimp": "^0.2.28",
+    "nodemon": "^1.12.1",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.43",
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3"
+  }
+}
